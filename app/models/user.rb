@@ -9,5 +9,5 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :phone_number, presence: true, uniqueness: true
   validates :password, length: { minimum: 6 }
-  validates :is_owner, presence: true
+  # validates :is_owner, presence: true
 end
