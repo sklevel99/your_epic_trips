@@ -5,10 +5,33 @@ class BookingsController < ApplicationController
 
   def new
     @trip = Trip.find(params[:trip_id])
+    @booking = Booking.new
+  end
+
+  def create
+    @trip = Trip.find(params[:trip_id])
     @booking = Booking.new(booking_params)
     @booking.trip = @trip
-    # if @booking.save
-    #   redirect_to
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render 'new'
+    end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
   end
 
   private
