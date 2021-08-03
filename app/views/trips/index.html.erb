@@ -1,7 +1,15 @@
-<ul>
-  <% @trips.each do |trip| %>
-   <li>
-      <%= trip.title %>
+<div class = "hero image">
+    <h1>Your epic trip</h1>
+      <h2>Hero image<h2>
+</div>
+<div class="cards">
+   <ul style = 'display: in-line;'>
+     <% @trips.each do |trip| %>
+    <li>
+       <%= link_to trip.title, trip_path(trip) %>
     </li>  
-  <% end %>
-</ul>
+        <% end %>
+    </ul>
+</div>
+<div class="footer"></div>
+
