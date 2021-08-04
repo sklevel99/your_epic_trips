@@ -1,8 +1,12 @@
 <h1>Choose your trip</h1>
 <div class="list">
+<%= @trip %>
   <%= @trip.title %>
   <%= @trip.details %>
   <%= @trip.total_participant %>
 </div>
-<%= link_to "Back", booking_path(@trip) %>
+<div>
+ <%= link_to "Book", new_trip_booking_path(@trip) %>
+<div>
+ <%= link_to "Back", booking_path(@trip) %>
 
