@@ -2,9 +2,7 @@
 <div class="list">
   <%= @trip.title %>
   <%= @trip.details %>
-  <%= @trip.start_date %>
-  <%= @trip.end_date %>
   <%= @trip.total_participant %>
-  <%= link_to booking_path(trip) %>
 </div>
+<%= link_to "Back", booking_path(@trip) %>
 
