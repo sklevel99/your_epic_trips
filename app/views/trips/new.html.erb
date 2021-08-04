@@ -1,0 +1,16 @@
+    <div class="container my-3" style="width:900px">
+      <h3>Create new trip</h3>
+      <%= simple_form_for @trip do |f| %>
+        <%= f.input :title %>
+        <%= f.input :details %>
+        <%= f.input :category %>
+        <%= f.input :price %>
+        <%= f.input :total_participant %>
+        <%= f.button :submit, class: "btn btn-sm btn-outline-primary" %>
+      <% end %>
+
+      <%= link_to "See all trips", trips_path, class: 'btn btn-sm btn-outline-primary' %>
+
+    </div>
+
+
