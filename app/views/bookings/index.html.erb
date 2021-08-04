@@ -1,7 +1,14 @@
-<!--> <h1>Your bookings list</h1>
+<h1>Your bookings list</h1>
 
 <ul>
-  <% @trips.bookings.each do |booking| %>
-    <li><%= booking.title, booking.type, booking %></li>
+  <% @bookings.each do |booking| %>
+    <li><%= booking.title%></li>
+    <li><%= booking.category %></li>
+    <li><%= booking.price%></li>
+    <li><%= booking.total_participant %></li>
+    <%= link_to 'Delete a booking', booking_path(booking), method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
-</ul> -->
+  <br><br>
+</ul>
+
+<%= link_to 'Go back to the lists', trips_path %>
