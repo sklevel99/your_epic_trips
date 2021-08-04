@@ -1,5 +1,13 @@
-<h1>Create a new booking</h1>
+<div>
+  <h1>Book <%= @trip.title %> </h1>
+</div>
 
-<%= link_to "Save booking", trip_bookings_path %>
+<div>
+  <%= simple_form_for (@booking) do |f| %>
+    <%=f.input :start_date, as: :date%>
+    <%=f.input :end_date, as: :date%>
+    <%=f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<%= link_to "More trips?", trips_path %>
+<%= link_to "Back to lists", trips_path %>

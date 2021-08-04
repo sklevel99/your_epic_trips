@@ -6,5 +6,7 @@
   <%= @trip.total_participant %>
 </div>
 <div>
-    <%= link_to "Book", new_trip_booking_path(@trip) %>
+ <%= link_to "Book", new_trip_booking_path(@trip) %>
 <div>
+ <%= link_to "Back", booking_path(@trip) %>
+
