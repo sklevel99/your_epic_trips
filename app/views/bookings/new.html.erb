@@ -3,7 +3,7 @@
 </div>
 
 <div>
-  <%= simple_form_for (@booking) do |f| %>
+  <%= simple_form_for [@trip, @booking] do |f| %>
     <%=f.input :start_date, as: :date%>
     <%=f.input :end_date, as: :date%>
     <%=f.submit "Submit", class: "btn btn-primary" %>
