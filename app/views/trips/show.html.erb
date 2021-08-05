@@ -65,4 +65,8 @@
 <div id="booking-form-div", data-bookings="<%= @bookings_dates.to_json %>">
 
 
+<div>
+ <%= link_to "Book", new_trip_booking_path(@trip), class: "btn btn-sm btn-outline-primary" %>
+<div>
+ <%= link_to "See all trips", trips_path, class: "btn btn-sm btn-outline-primary" %>
 
