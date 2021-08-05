@@ -118,7 +118,6 @@ GEM
       bourbon (>= 4.0)
       sass (>= 3.3)
     nio4r (2.5.7)
-    nokogiri (1.11.7-x86_64-darwin)
     nio4r (2.5.8)
     nokogiri (1.12.2-x86_64-darwin)
       racc (~> 1.4)
