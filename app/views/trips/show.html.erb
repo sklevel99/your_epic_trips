@@ -34,22 +34,35 @@
 
       <div class="flat-description">
         <div class="flat-info">
-          <p><i class="fas fa-ruler-combined"></i> <%= @trip.category %> </p>
+          <p><i class="fas fa-stamp"></i> <%= @trip.category %> </p>
           <p><i class="fas fa-rupee-sign"></i><span id="flat-price-per-night"><%= @trip.price %></span> Rs / pers</p>
           <p><i class="fas fa-users"></i> <%= @trip.total_participant %></p>
         </div>
-        <p><%= @trip.details%></p>
+        <div class="trip-details">
+          <div class="details-title">What you'll do</div>
+          <br>
+          <div class="details"><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%><%= @trip.details%></div>
+        </div>
+        <div class="trip-details">
+          <div class="details-title">What to bring</div>
+          <br>
+          <div><i class="fas fa-edit"></i> <span> After you book the experience you'll receive the list of ingredients and tools that you'll need.</span></div>
+        </div>
       </div>
     </div>
+
+      <div class="form-wrapper">
+        <%= simple_form_for [@trip, @booking], method: "post" do |f| %>
+          <%= f.input :start_date, label: "Choose your dates:", as: :string, required: false, input_html: { id: "range_start", class: "d-none"} %>
+          <%= f.input :end_date, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
+          <div class="below-calendar">
+            From Rs <%= @trip.price%> / pers <%= f.button :submit, "Book", class: "btn btn-principal btn-margin-top" %>
+          </div>
+        <% end %>
+      </div>
+
   </div>
 </div>
 
-<div class="container">
-  <div class="flat-container margin-nav">
-    <%= link_to new_trip_booking_path(@trip) do %>
-      <button class="btn btn-principal btn-margin-top">Book</button>
-    <% end %>
-  </div>
-</div>
-
+<div id="booking-form-div", data-bookings="<%= @bookings_dates.to_json %>">
 
