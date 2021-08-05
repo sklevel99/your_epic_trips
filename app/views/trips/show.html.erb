@@ -1,6 +1,5 @@
 <h1>Choose your trip</h1>
 <div class="list">
-<%= @trip %>
   <%= @trip.title %>
   <%= @trip.details %>
   <%= @trip.total_participant %>
@@ -8,5 +7,5 @@
 <div>
  <%= link_to "Book", new_trip_booking_path(@trip), class: "btn btn-sm btn-outline-primary" %>
 <div>
- <%= link_to "See all trips", trip_paths, class: "btn btn-sm btn-outline-primary" %>
+ <%= link_to "See all trips", trips_path, class: "btn btn-sm btn-outline-primary" %>
 
