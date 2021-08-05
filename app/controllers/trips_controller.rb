@@ -54,8 +54,3 @@ class TripsController < ApplicationController
     params.require(:trip).permit(:title, :category, :details, :total_participant, :price)
   end
 end
-
-   params.require(:trip).permit(:title, :category, :details, :total_participant, :price)
-  end
-  
-end
