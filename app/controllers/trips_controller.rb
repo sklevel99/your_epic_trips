@@ -7,6 +7,14 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
+    @booking = Booking.new
+    @bookings       = Booking.where(trip_id: @trip.id)
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
 
   def new
@@ -42,7 +50,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-   params.require(:trip).permit(:title, :category, :details, :total_participant, :price)
-  end  
-  
+
+    params.require(:trip).permit(:title, :category, :details, :total_participant, :price)
+  end
 end
