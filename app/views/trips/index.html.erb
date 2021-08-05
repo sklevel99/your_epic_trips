@@ -1,11 +1,22 @@
 <div class = "container">
-   <h1>Your epic trip</h1>
+   <h1 class="text-align-center">Your epic trip</h1>
     <div class="list">
        <ul class = "list-unstyled">
           <% @trips.each do |trip| %>
-           <li>
-             <%= link_to trip.title, trip_path(trip), class: "trip-title" %>
-            </li>
+           <li class="product">
+             <div>
+            <!-- <img src="catamaran_cruise.jpg" alt="image" class="product-image img-rounded">-->
+              <%= image_tag("catamaran_cruise.jpg", class: "product-image img-rounded") %>
+             </div>
+             <div class="product-description"> 
+               <%= link_to trip.title, trip_path(trip), class: "trip-title" %><br>
+               <%#= trip.details%>
+             </div>
+             <ul class="list-inline product-controls">
+              <a href="#"><i class="fa fa-heart"></i></a>
+              <a href="#"><i class="fa fa-bookmark"></i></a>
+             </ul>             
+           </li>
            <% end %>
         </ul>
      </div>
