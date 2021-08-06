@@ -4,4 +4,6 @@ class Trip < ApplicationRecord
   validates :title, presence: true
   validates :category, presence: true
   validates :price, presence: true
+
+  has_one_attached :photo
 end
