@@ -1,17 +1,17 @@
 <div class = "container">
    <h1 class="text-center">Your epic trip</h1>
+   
     <div class="list">
        <ul class = "list-unstyled">
           <% @trips.each do |trip| %>
            <li class="product">
              <div>
-            <!-- <img src="catamaran_cruise.jpg" alt="image" class="product-image img-rounded">-->
-              <%= image_tag("catamaran_cruise.jpg", class: "product-image img-rounded") %>
+               <%= image_tag "https://res.cloudinary.com/dytc2ip6x/image/upload/c_scale,w_200/v1628167203/39dc529a-ead4-4be1-a368-2c248d48c9e8_bacjat.jpg", class: "img-rounded" %>
              </div>
-             <div class="product-title"> 
+             <div class="product-title truncate"> 
                <%= link_to trip.title, trip_path(trip), class: "trip-title" %><br>
-               <%#= trip.details%>
-             </div>
+               <%= trip.details %>
+*            </div>
              <ul class="list-inline product-controls">
               <a href="#"><i class="fa fa-heart"></i></a>
               <a href="#"><i class="fa fa-bookmark"></i></a>
@@ -20,8 +20,8 @@
            <% end %>
         </ul>
      </div>
-     <div>
-       <%= link_to "add new trip", new_trip_path, class: "btn btn-sm btn-outline-primary" %>
-     <div>
+    <div text-align-left>
+      <%= link_to "add new trip", new_trip_path, class: "btn btn-sm btn-outline-primary" %>
+    <div>
 </div>
 <div class="footer"></div>

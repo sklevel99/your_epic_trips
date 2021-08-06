@@ -18,7 +18,7 @@
 }
 
 .product:hover {
-  background: rgba(247, 239, 239, 0.808);
+  background: rgba(250, 250, 250, 0.808);
   color:rgb(0, 0, 0);
 }
 
@@ -26,17 +26,6 @@
   width: 200px;
   border-radius: 5px;
 }
-/*
-.product:hover .product-upvote {
-  font-size: 25px;
-}
-
-.product-upvote {
-  font-size: 20px;
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-*/
 .product-title {
   flex: 1 0 auto;
   padding: 20px;
@@ -49,7 +38,7 @@
 }
 
 .truncate {
-  width: 250px;
+  width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

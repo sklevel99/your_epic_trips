@@ -6,12 +6,14 @@
         <%= f.input :category %>
         <%= f.input :price %>
         <%= f.input :total_participant %>
-        <%= f.input :photos, as: :file, input_html: { multiple: false} %>
-
+        <%= f.input :photos, as: :file %>
         <%= f.button :submit, class: "btn btn-sm btn-outline-primary" %>
+        <%#= image: Cloudinary::Uploader.upload(:file) %>
+
+
       <% end %>
 
-      <%= link_to "See all trips", trips_path, class: 'btn btn-sm btn-outline-primary' %>
+      <%= link_to "See all trips", trips_path, class: 'btn btn-lg btn-outline-primary' %>
 
     </div>
 

@@ -37,7 +37,7 @@ activities = json["Activities"].each do |activity|
     user: a
     )
     puts trip.title
-end
+ end
 
 puts "Finished"
 
