@@ -28,7 +28,6 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-import "../plugins/flatpickr"
 import { initFlatPicker } from '../plugins/flatpicker';
 
 // Internal imports, e.g:
@@ -39,7 +38,3 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initFlatPicker();
 });
-
-
-
-
