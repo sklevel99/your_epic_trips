@@ -6,6 +6,8 @@
         <%= f.input :category %>
         <%= f.input :price %>
         <%= f.input :total_participant %>
+        <%= f.input :photos, as: :file, input_html: { multiple: false} %>
+
         <%= f.button :submit, class: "btn btn-sm btn-outline-primary" %>
       <% end %>
 
