@@ -28,7 +28,7 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-import { initFlatPicker } from '../plugins/flatpicker';
+import { initFlatPicker } from '../plugins/flatpickr';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
