@@ -1,15 +1,52 @@
-<div class="container">
-  <div class="review">
-    <h2>Submit a Review</h2>
-    <%= simple_form_for [@booking, @review] do |f| %>
-      <%= f.input :content %>
-      <%= f.input :rating %>
-      <div class="my-3">
-        <% 5.times do |index| %>
-          <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+ <div class="container">
+   <div class="book-content">
+        <%= image_tag "3.jpg", height: 300, width: 1200, crop: :fill %>
+        <div class="book-info">
+          <br>
+          <h3><%= @booking.trip.title %></h3>
+          <div class="book-date">
+            <h5><strong>Booked :</strong></h5>
+            <h5>From - <%= @booking.start_date.strftime('%e %B %Y')%></h5>
+            <h5>To - <%= @booking.end_date.strftime('%e %B %Y')%></h5>
+          </div>
+          <br>
+          <div class="book-price">
+            <h4>Total Price : <%= @booking.trip.price %> €</h4>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="book-description">
+        <li><%= @booking.trip.details %></li>
+      </div>
+      <br>
+        <button class="btn btn-principal btn-margin-top">Message the crew</button>
+      <br>
+      <br>
+      <div>
+        <% if @booking.reviews.blank? %>
+          Be the first to leave a review!
+        <% else %>
+          <h4>Reviews</h4>
+          <br>
+          <% @booking.reviews.each do |review| %>
+            <p> <%= review.content %> - <%= review.rating %> </p>
+          <% end %>
         <% end %>
       </div>
-      <%= f.submit class: "btn btn-primary", value: "Submit" %>
-    <% end %>
-  </div>
+
+
+      <div class="review">
+        <h2>Submit a Review</h2>
+        <%= simple_form_for [@booking, @review] do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating %>
+          <div class="my-3">
+            <% 5.times do |index| %>
+              <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+            <% end %>
+          </div>
+          <%= f.submit class: "btn btn-primary", value: "Submit" %>
+        <% end %>
+      </div>
 </div>
