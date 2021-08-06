@@ -3,6 +3,11 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user: current_user)
   end
 
+  def show
+    @review = Review.new
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @trip = Trip.find(params[:trip_id])
     @booking = Booking.new
