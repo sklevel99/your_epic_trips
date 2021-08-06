@@ -1,3 +1,48 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "flat";
+// Import page-specific CSS files here.
+@import "home";
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  text-decoration: none;
+
+  link_to {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+  }
+
+}
+
+.product:hover {
+  background: rgba(250, 250, 250, 0.808);
+  color:rgb(0, 0, 0);
+}
+
+.product-image {
+  width: 200px;
+  border-radius: 5px;
+}
+.product-title {
+  flex: 1 0 auto;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.product-controls a {
+  font-size: 15px;
+  color: #CCCCCC;
+}
+
+.truncate {
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
