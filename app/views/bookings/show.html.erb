@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="review">
+    <h2>Submit a Review</h2>
+    <%= simple_form_for [@booking, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <div class="my-3">
+        <% 5.times do |index| %>
+          <i id="<%= index + 1 %>" class="review-rating far fa-star"></i>
+        <% end %>
+      </div>
+      <%= f.submit class: "btn btn-primary", value: "Submit" %>
+    <% end %>
+  </div>
+</div>

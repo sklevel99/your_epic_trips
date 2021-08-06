@@ -7,6 +7,9 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { dynamicRating } from "../plugins/starsInReviewForm";
+
+dynamicRating();
 
 Rails.start()
 Turbolinks.start()
