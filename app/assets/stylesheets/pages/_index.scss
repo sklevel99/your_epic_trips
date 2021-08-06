@@ -8,12 +8,25 @@
   padding: 10px;
   transition: all 0.3s ease;
   border-radius: 3px;
+  text-decoration: none;
+
+  link_to {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+  }
+
 }
 
 .product:hover {
-  background: rgb(240, 240, 240);
+  background: rgba(247, 239, 239, 0.808);
+  color:rgb(0, 0, 0);
 }
 
+.product-image {
+  width: 200px;
+  border-radius: 5px;
+}
+/*
 .product:hover .product-upvote {
   font-size: 25px;
 }
@@ -23,11 +36,13 @@
   padding: 20px;
   transition: all 0.3s ease;
 }
-
-.product-description {
+*/
+.product-title {
   flex: 1 0 auto;
   padding: 20px;
+  text-decoration: none;
 }
+
 .product-controls a {
   font-size: 15px;
   color: #CCCCCC;

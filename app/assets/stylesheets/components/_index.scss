@@ -3,21 +3,3 @@
 @import "avatar";
 @import "navbar";
 @import "banner";
-
-.list-unstyled {
-    padding-left: 0;
-    list-style: none;
-}
-
-.list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    transition: all 0.3s ease;
-    border-radius: 3px;
-}
-.trip-title {
-    flex: 1 0 auto;
-    padding: 20px;
-}
